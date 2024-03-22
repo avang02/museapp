@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+@font-face {
+  font-family: chopin;
+  src: url('../fonts/ChopinScript.ttf');
+}
+
+/* Header Partial */
+header {
+  height: 10vh;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+body {
+  height: 100vh;
+  background-color: #FF9666;
+  background-image: url('../images/orange\ and\ green.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.museapp {
+  font-family: 'ojuju';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vmin;
+  font-size: 5vmin;
+}
+.museapp:hover {
+  background-color: #f3773d;
+  color: #304B3C;
+  border-radius: 5px;
+}
+.title {
+  color: #304B3C;
+}
+.login {
+  font-family: 'ojuju';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vmin;
+  font-size: 5vmin;
+}
+.login:hover {
+    background-color: #f3773d;
+    color: #304B3C;
+    border-radius: 5px;
+}
+
+/* Homepage */
+.home-page {
+  height: 100vmin;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+#classical:hover {
+  background-color: #f3773d;
+  border-radius: 16px;
+}
+#pop > img:hover {
+  background-color: #f3773d;
+  border-radius: 16px;
+}
+#jazz:hover {
+  background-color: #f3773d;
+  border-radius: 16px;
+}
+#randb > img:hover {
+  background-color: #f3773d;
+  border-radius: 16px;
+}
+#rock > img:hover {
+  background-color: #f3773d;
+  border-radius: 16px;
+}
+#country > img:hover {
+  background-color: #f3773d;
+  border-radius: 16px;
+}
+#classical{
+  color: black;
+  font-family: 'ojuju';
+  font-weight: bold;
+  height: 40vmin;
+  width: 40vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#jazz {
+  color: black;
+  font-family: 'ojuju';
+  font-weight: bold;
+  height: 40vmin;
+  width: 40vmin;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#rock > img {
+  height: 40vmin;
+  width: 40vmin;
+}
+#pop > img {
+  height: 40vmin;
+  width: 40vmin;
+}
+#randb > img {
+  height: 40vmin;
+  width: 40vmin;
+}
+#country > img {
+  height: 40vmin;
+  width: 40vmin;
+}
+
+a {
+  color: #FF9666;
+  text-decoration: none;
+}
+
+.index-body {
+  width: 100%;
+  display: flex;
+  flex-direction: flex;
+  justify-content: center;
+}
+.navigation {
+  height: 90vmin;
+  width: 10%;
+  border-style: solid;
+  border-right-style: none;
+}
+.navigation > a {
+  font-family: 'ojuju';
+  font-size: large;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navigation > a:hover {
+  color:#304B3C;
+}
+
+.box-container {
+  height: 90vmin;
+  width: 90%;
+  overflow-y: scroll;
+  border-style: solid;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.box {
+  height: 40vmin;
+  width: 40vmin;
+  /* From https://css.glass */
+  background: rgba(241, 179, 150, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 150, 102, 0.56);
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+}
+.box-div-head {
+  font-family: 'ojuju';
+  font-weight: bold;
+  font-size: 3vmin;
+  color:#304B3C;
+  height: 3vmin;
+  display: flex;
+  justify-content: center;
+}
+.box-divs {
+  font-family: 'ojuju';
+  font-weight: bold;
+  height: 2vmin;
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  font-family: 'ojuju';
+  color: black;
+  text-decoration: none;
+}
+.details:hover {
+  color: #304B3C;
+}
+
+.title {
+  height: 5vmin;
+}
+
+.nav-header {
+  height: 10vmin;
+  max-width: 100%;
+  font-family: 'ojuju';
+  background-color: #304B3C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nav1 {
+  height: 5vmin;
+  max-width: 100%;
+  font-family: 'ojuju';
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav2 {
+  height: 5vmin;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-family: 'ojuju';
+  font-size: 40;
+}
+
+.song-details {
+  height: 5vmin;
+  max-width: max-content;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.update {
+  color: black;
+}
+
+.new-page {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.new-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.new-form > input{
+  width: 30vmin;
+}
+.new-form > label {
+  font-family: 'ojuju';
+  font-weight: bold;
+}
+
+.show-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.song-details > div {
+  font-family: 'ojuju';
+  font-weight: bold;
+  font-size: 2vmin;
+}
+
+.update {
+  font-family: 'ojuju';
+}
+.update:hover {
+  color:#304B3C;
+}
+.rev1 {
+  font-family: 'ojuju';
+  font-size: 3vmin;
+}
+.rev2 {
+  font-family: 'ojuju';
+  font-size: large;
+}
+.reviews {
+  background: rgba(235, 227, 224, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 150, 102, 0.56);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review-form {
+  
+  display: flex;
+  flex-direction: column;
+}
+.review-form > label {
+  font-family: 'ojuju';
+  font-weight: bold;
+  font-size: 2vmin;
+}
+.content {
+  width: 30vmin;
+  resize: none;
+}
+.add-review {
+  
+  width: 15vmin;
+}
+.all-reviews {
+  width: 50vmin;
+  background: rgba(235, 227, 224, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  padding: 1vmin;
+  display: flex;
+  flex-direction: column;
+}
+.all-reviews > .content {
+  display: flex;
+}
+.review-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 1vmin;
+}
+.delete-review {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.user-div {
+  font-family: 'ojuju';
+  font-weight: bold;
+  font-size: 2vmin;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.user-avatar {
+  border-radius: 50%;
+  width: 5vmin;
+  height: auto;
+}
+.rating {
+  font-family: 'ojuju';
+  font-weight: bold;
+  font-size: 2vmin;
+}
+.content {
+  display: flex;
+  font-family: 'ojuju';
+  font-weight: bold;
+  font-size: 2vmin;
+  width: 48vmin;
+}

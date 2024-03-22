@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<section class="new-page">
+    <form class="new-form" action="/musicscores" method="POST">
+        <label>Song: <input type="text" name="song"></label>
+        <label>Artist: <input type="text" name="artist"></label>
+        <label>Arranged By: <input type="text" name="composer"></label>
+        <label>Genre: 
+            <select name="genre">
+                <option value="pop">Pop</option>
+                <option value="classical">Classical</option>
+                <option value="jazz">Jazz</option>
+                <option value="R&B">R&B</option>
+                <option value="rock">Rock</option>
+                <option value="country">Country</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+        
+        <label>Music Score: <input type="file" name="musicScore"></label>
+        
+        <input type="submit" value="Add Sheet">
+    </form>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,62 @@
+<%- include('../partials/header') %>
+
+<br><br>
+<section class="show-page">
+    <section class="song-details">
+        <div>Artist: <%= musicscore.artist %></div>
+        <div>Composer: <%= musicscore.composer %></div>
+        <div>Genre: <%= musicscore.genre %></div>
+        <% if(user?._id?.toString() === musicscore?.user?.toString()) { %>
+        <div><form action="/musicscores/<%= musicscore._id %>?_method=DELETE" method="POST"><button type="submit">Delete</button></form></div>
+        <div><a class="update" href="/musicscores/<%= musicscore._id %>/edit">UPDATE</a></div>
+        <% } %>
+    </section>
+    <br><br><br><br>
+
+    <section class="reviews">
+        <h2 class="rev1">Reviews</h2>
+        <% if(user) { %>
+        <form method="POST" action="/musicscores/<%= musicscore._id %>/reviews" class="review-form">
+            <Label class="rev2">Review:</Label>
+            <textarea name="content" class="content"></textarea>
+            <label class="rating"><h4>Rating</h4><select name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></label>
+            
+            <input type="submit" value="Add Review" class="add-review">
+        </form>
+        <% } else { %>
+        <h3>Log in to write review</h3>
+        <% } %>
+        </section>
+        <section class="all-reviews-container">
+            <div><h3>Rating</h3></div>
+        <% if(musicscore.reviews.length) { %>
+        <section class="all-reviews">
+            <% musicscore.reviews.forEach(function(r) { %> 
+                <section class="review-user">
+                    <div class="user-div"><img class="user-avatar" src="<%= r.user.avatar%>">&nbsp;&nbsp;<%= r.user.name %></div>
+                    <div class="rating">Rating: <%= r.rating %>/5</div>
+                </section>
+                <div class="content"><%= r.content %></div>
+                <% if(user?._id?.toString() === r?.user?.toString()) { %>
+                <div>
+                    <form class="delete-review" action="/musicscores/<%= musicscore.id %>/reviews/<%= r.id%>?_method=DELETE" method="POST">
+                    <button type="submit">DELETE REVIEW</button>
+                    </form>
+                </div>
+            </section>
+            <br>
+            <% } %>
+        <% }); %>
+        <% } else { %>
+            <h5>No Reviews Yet</h5>
+        <% } %>
+    </section>
+</section>
+
+<%- include('../partials/footer')%>

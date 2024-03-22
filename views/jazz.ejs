@@ -1,0 +1,27 @@
+<%- include('./partials/header') %>
+
+<section class="pop-page">
+    <section class="index-body">
+        <section class="navigation">
+            <a href="/classical">Classical</a>
+            <a href="/jazz">Jazz</a>
+            <a href="/rock">Rock</a>
+            <a href="/pop">Pop</a>
+            <a href="/randb">R&B</a>
+            <a href="/country">Country</a>
+        </section>
+
+        <section class="box-container">
+            <% jazzmusic.forEach(function(m) { %>
+                <section class="box">
+                    <div class="box-div-head"><%= m.song %></div><br>
+                    <div class="box-divs"><%= m.artist %></div>
+                    <div class="box-divs">Arranged by: <%= m.composer %></div>
+                    <div class="box-divs"><a class="details" href="/musicscores/<%=m._id%>">DETAILS</a></div>
+                </section>    
+            <% }); %>
+        </section>
+    </section>
+</section>
+
+<%- include('./partials/footer') %>
